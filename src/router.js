@@ -1,25 +1,33 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import RoomList from '@/components/RoomList'
+import AddRoom from '@/components/AddRoom'
+import JoinRoom from '@/components/JoinRoom'
+import ChatRoom from '@/components/ChatRoom'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'RoomList',
+      component: RoomList
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/add-room',
+      name: 'AddRoom',
+      component: AddRoom
+    },
+    {
+      path: '/join-room/:id',
+      name: 'JoinRoom',
+      component: JoinRoom
+    },
+    {
+      path: '/chat-room/:id/:nickname',
+      name: 'ChatRoom',
+      component: ChatRoom
     }
   ]
 })
