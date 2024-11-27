@@ -10,7 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^1.7.8",
     "bluebird": "^3.5.2",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.0.0-beta.2",
